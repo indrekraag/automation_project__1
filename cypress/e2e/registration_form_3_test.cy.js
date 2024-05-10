@@ -7,14 +7,18 @@ BONUS TASK: add visual tests for registration form 3
 Task list:
 * Create test suite for visual tests for registration form 3 (describe block)
 * Create tests to verify visual parts of the page:
-    * radio buttons and its content
-    * dropdown and dependencies between 2 dropdowns:
-        * list of cities changes depending on the choice of country
-        * if city is already chosen and country is updated, then city choice should be removed
-    * checkboxes, their content and links
-    * email format
- */
+* radio buttons and its content
+* dropdown and dependencies between 2 dropdowns:
+* list of cities changes depending on the choice of country
+* if city is already chosen and country is updated, then city choice should be removed
+* checkboxes, their content and links
+* email format
+*/
 
+
+    it.only('Check that radio buttons list is correct', () => {
+        cy.get('input[type="radio"]').should('have.length', 4)
+})
 
 /*
 BONUS TASK: add functional tests for registration form 3
